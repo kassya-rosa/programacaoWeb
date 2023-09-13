@@ -7,7 +7,7 @@ app.engine("html", mustacheExpress());
 app.set("view engine", "html");
 app.set("views", __dirname + "/views");
 
-app.use(express. urlencoded());
+app.use(express.urlencoded());
 
 app.get("/formulario", (req, res) => {
     res.render("index.html");
@@ -15,11 +15,10 @@ app.get("/formulario", (req, res) => {
 
 app.post("/precessar_dados", (req, res) => {
     const {nome, email, telefone, dataAgendamento} = req.body;
-    
+    res.send(req.body);
 
     res.render("dados.html");
-
-    console.log(nome);
+    
 });
 
 app.listen(PORT, () => {
