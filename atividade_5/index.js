@@ -13,7 +13,7 @@ app.get("/formulario", (req, res) => {
     res.render("index.html");
 });
 
-app.post("/precessar_dados", (req, res) => {
+app.post("/dados", (req, res) => {
     const {nome, email, telefone, dataAgendamento} = req.body;
     res.send(req.body);
 
