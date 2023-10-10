@@ -12,7 +12,7 @@ app.get('/', function(req, res){
         nome: 'Mario',
         telefone: 2222222
         endereco: 'Rua 25 norte, lt 20'
-        data: 
+        data: '05/10/2000'
     };
     res.render('index.html', {usuario});
 });
